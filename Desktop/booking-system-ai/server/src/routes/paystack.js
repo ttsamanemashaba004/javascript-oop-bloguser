@@ -154,14 +154,14 @@ router.post('/paystack-webhook', express.raw({ type: 'application/json' }), asyn
     });
     const bookingTime = bookingDetails.booking_time;
 
-    const confirmationMessage = `Payment received! ✅
+    const confirmationMessage = `Payment received.
 
-*Booking Confirmed*
+Booking Confirmed
 
-📅 Date: ${bookingDate}
-⏰ Time: ${bookingTime}
-💅 Service: ${service.name}
-💰 Paid: R${service.deposit_amount} deposit
+Date: ${bookingDate}
+Time: ${bookingTime}
+Service: ${service.name}
+Paid: R${service.deposit_amount} deposit
 
 Your appointment is confirmed. We look forward to seeing you. If you need to reschedule, please let us know at least 24 hours in advance.
 
